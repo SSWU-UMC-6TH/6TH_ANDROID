@@ -20,5 +20,9 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
     <style name="Theme.UMC_FLO_CLONCODING" parent="Base.Theme.UMC_FLO_CLONCODING" />
 </resources>
