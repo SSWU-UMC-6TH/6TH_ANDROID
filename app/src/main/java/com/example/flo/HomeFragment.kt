@@ -1,15 +1,14 @@
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
 import androidx.viewpager2.widget.ViewPager2
-import com.example.flo.AlbumFragment
 import com.example.flo.BannerFragment
 import com.example.flo.BannerVPAdapter
 import com.example.flo.MainActivity
+import com.example.flo.MemoActivity
 import com.example.flo.R
 import com.example.flo.databinding.FragmentHomeBinding
 
@@ -32,6 +31,11 @@ class HomeFragment : Fragment() {
                 .supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, AlbumFragment()).commitAllowingStateLoss()
         }
+        binding.homePannelBtnMemoIv.setOnClickListener {
+            val intent = Intent(requireActivity(), MemoActivity::class.java)
+            startActivity(intent)
+        }
+
         val bannerAdapter = BannerVPAdapter(this)
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
@@ -41,4 +45,5 @@ class HomeFragment : Fragment() {
         return binding.root
 
     }
+
 }
