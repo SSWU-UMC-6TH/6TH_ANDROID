@@ -25,6 +25,8 @@
             android:name=".SongActivity"
             android:exported="false">
         </activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".SignUpActivity"/>
     </application>
 
 </manifest>
